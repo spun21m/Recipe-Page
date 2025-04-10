@@ -36,22 +36,23 @@ h1 {
   box-shadow: 0 4px 15px hsl(30, 54%, 90%);
 }
 
-.omelette-image {
-  width: 100%;
-  height: auto;
-  border-radius: 13px;
-}
-
 p {
   color: hsl(30, 10%, 34%);
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 li::marker {
   color: hsl(14, 45%, 36%);
 }
 
-.preparation-time {
+header .omelette-image {
+  width: 100%;
+  height: auto;
+  border-radius: 13px;
+}
+
+header .preparation-time {
   padding: 30px;
   background-color: hsl(330, 100%, 98%);
   color: hsl(30, 10%, 34%);
@@ -61,7 +62,7 @@ li::marker {
   margin-bottom: 30px;
 }
 
-.preparation-time h2 {
+header .preparation-time h2 {
   font-family: "Outfit", sans-serif;
   color: hsl(332, 51%, 32%);
 }
@@ -75,6 +76,7 @@ main .ingredients {
 }
 
 main .instructions {
+  line-height: 1.5;
   padding-bottom: 10px;
   margin-bottom: 20px;
   border-bottom: 1px solid hsl(30, 18%, 87%);
@@ -96,31 +98,131 @@ main .nutrition h2 {
   margin-bottom: 15px;
 }
 
-.nutrition-table {
+main .nutrition-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.nutrition-table td {
+main .nutrition-table td {
   padding: 8px 15px;
   border-bottom: 1px solid hsl(30, 18%, 87%);
 }
 
-.nutrition-table tr:nth-child(4) td {
+main .nutrition-table tr:nth-child(4) td {
   border-bottom: none;
 }
 
-.nutrition-table .nutrition-value {
+main .nutrition-table .nutrition-value {
   color: hsl(14, 45%, 36%);
   font-weight: bold;
 }
 
-.attribution {
+footer .attribution {
   margin-top: 20px;
   font-size: 11px;
   text-align: center;
 }
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
+footer .attribution a {
+  color: hsl(14, 45%, 36%);
+}
+
+@media (min-width: 1440px) {
+  body {
+    max-width: 1200px;
+    font-size: 28px;
+  }
+
+  h1 {
+    font-size: 52px;
+    margin: 20px 0;
+  }
+
+  .container {
+    padding: 50px;
+    border-radius: 25px;
+  }
+
+  header .omelette-image {
+    border-radius: 25px;
+  }
+
+  header .preparation-time {
+    padding: 20px 40px;
+  }
+
+  .preparation-time,
+  .ingredients,
+  .instructions,
+  p {
+    line-height: 2;
+  }
+
+  main .nutrition-table td {
+    padding: 18px 24px;
+  }
+
+  footer .attribution {
+    font-size: 14px;
+    margin: 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  header .omelette-image {
+    border-radius: 0;
+    width: 100vw;
+    height: auto;
+    margin: -10px 0;
+  }
+
+  header .recipe-header {
+    padding: 20px 30px 10px;
+  }
+
+  header .preparation-time {
+    padding: 10px;
+    margin: 0 30px;
+  }
+
+  main .ingredients {
+    padding: 20px 30px;
+  }
+
+  main .instructions {
+    padding: 0 30px;
+  }
+
+  main .instructions ol li {
+    margin-bottom: 15px;
+  }
+
+  main .nutrition {
+    padding: 0 30px;
+  }
+
+  .preparation-time,
+  .ingredients,
+  .instructions,
+  .nutrition {
+    padding-bottom: 10px;
+  }
+
+  main .nutrition-table td {
+    padding: 5px 15px;
+  }
+
+  footer .attribution {
+    margin: 10px;
+  }
 }
