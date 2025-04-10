@@ -20,15 +20,14 @@ h3 {
   font-family: "Young Serif", serif;
   color: hsl(14, 45%, 36%);
   font-weight: 400;
+  margin-bottom: 15px;
 }
 
 h1 {
-  color:  hsl(24, 5%, 18%);
+  color: hsl(24, 5%, 18%);
   margin: 10px 0;
   font-size: 30px;
-  
 }
-
 
 .container {
   background-color: hsl(0, 0%, 100%);
@@ -48,7 +47,7 @@ p {
   margin-bottom: 20px;
 }
 
-li::marker{
+li::marker {
   color: hsl(14, 45%, 36%);
 }
 
@@ -65,10 +64,9 @@ li::marker{
 .preparation-time h2 {
   font-family: "Outfit", sans-serif;
   color: hsl(332, 51%, 32%);
-  margin-bottom: 10px;
 }
 
-main .ingredients{
+main .ingredients {
   list-style-position: inside;
   line-height: 2;
   margin-bottom: 20px;
@@ -76,20 +74,49 @@ main .ingredients{
   border-bottom: 1px solid hsl(30, 18%, 87%);
 }
 
-main .ingredients h2{
+main .instructions {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+main .instructions ol {
+  padding-left: 1.5em;
+}
+
+main .instructions ol li {
   margin-bottom: 20px;
 }
 
-main .instructions{
-  /* list-style-position: inside; */
+main .instructions ol li::marker {
+  content: counter(list-item) ".   ";
 }
 
-main .instructions h2{
-  margin-bottom: 20px;
+main .nutrition h2 {
+  margin-bottom: 15px;
 }
 
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutrition-table td {
+  padding: 8px 15px;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.nutrition-table tr:nth-child(4) td {
+  border-bottom: none;
+}
+
+.nutrition-table .nutrition-value {
+  color: hsl(14, 45%, 36%);
+  font-weight: bold;
+}
 
 .attribution {
+  margin-top: 20px;
   font-size: 11px;
   text-align: center;
 }
